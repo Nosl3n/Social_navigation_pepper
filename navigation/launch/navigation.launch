@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <launch>
-  <arg name="map_file" default="/home/shado/pepper_sim_ws/src/Navigation_pepper/navigation/maps/labs.yaml"/>
+  <arg name="map_file" default="$(find navigation)/maps/labs.yaml"/>
   <arg name="move_forward_only" default="true"/>
 
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
