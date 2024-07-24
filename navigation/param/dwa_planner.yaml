@@ -1,0 +1,44 @@
+DWAPlannerROS:
+# Límites de velocidad
+  max_vel_x: 0.8 # Aumenta este valor para mayor velocidad
+  min_vel_x: 0.5
+  max_vel_y: 0.6 # Mantener en 0 para robots no holonómicos
+  min_vel_y: 0.4
+  max_vel_trans: 0.6 # Aumenta este valor para mayor velocidad
+  min_vel_trans: 0.4
+  max_vel_theta: 4.0 # Aumenta para rotaciones más rápidas
+  min_vel_theta: 0.2
+
+# Límites de aceleración
+  acc_lim_x: 2.0 # Aumenta este valor para aceleraciones más rápidas
+  acc_lim_y: 0
+  acc_lim_theta: 2.5 # Aumenta para aceleraciones angulares más rápidas
+
+# Tolerancia de la meta
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.2
+  latch_xy_goal_tolerance: false
+
+# Parámetros de simulación hacia adelante
+  sim_time: 1.5
+  vx_samples: 20
+  vy_samples: 0
+  vth_samples: 40
+  controller_frequency: 10.0
+
+# Parámetros de puntuación de trayectorias
+  path_distance_bias: 32.0
+  goal_distance_bias: 20.0
+  occdist_scale: 0.02
+  forward_point_distance: 0.325
+  stop_time_buffer: 0.2
+  scaling_speed: 0.05
+  max_scaling_factor: 0.09
+
+# Prevención de oscilaciones
+  oscillation_reset_dist: 0.05
+
+# Depuración
+  publish_traj_pc: true
+  publish_cost_grid_pc: true
+  holonomic_robot: true
