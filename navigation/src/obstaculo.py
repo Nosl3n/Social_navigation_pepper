@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import rospy
 from costmap_2d.costmap_2d_ros import Costmap2DROS
