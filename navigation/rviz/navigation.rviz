@@ -6,12 +6,13 @@ Panels:
       Expanded:
         - /TF1/Frames1
         - /TF1/Tree1
-        - /LaserScan1/Status1
+        - /Map1
         - /Global Map1/Costmap1
         - /Global Map1/Planner1
         - /Local Map1/Polygon1
         - /Local Map1/Costmap1
         - /Local Map1/Planner1
+        - /Marker1
       Splitter Ratio: 0.5
     Tree Height: 796
   - Class: rviz/Selection
@@ -518,6 +519,14 @@ Visualization Manager:
       Topic: /move_base_simple/goal
       Unreliable: false
       Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        grid_node: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -542,25 +551,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.730731964111328
+      Distance: 4.6075215339660645
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.6079028844833374
-        Y: -0.018549947068095207
-        Z: -0.091637521982193
+        X: -1.150280237197876
+        Y: -0.016643304377794266
+        Z: 0.22962366044521332
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.98020339012146
+      Pitch: 0.8852036595344543
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.791595458984375
+      Yaw: 4.786595821380615
     Saved: ~
 Window Geometry:
   Displays:

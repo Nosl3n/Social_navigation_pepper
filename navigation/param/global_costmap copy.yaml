@@ -1,0 +1,9 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 5.0
+  publish_frequency: 2.0
+  static_map: true
+  transform_tolerance: 1.8
+  cost_scaling_factor: 5.0 # Aumenta para incrementar los costes cerca de obstáculos
+  inflation_radius: 0.5 # Ajusta para cambiar el radio de inflación

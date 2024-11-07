@@ -1,4 +1,4 @@
-transform_tolerance: 1.8
+transform_tolerance: 1.5
 robot_radius: 0.18
 footprint_padding: 0.05
 
@@ -12,7 +12,8 @@ obstacle_layer:
   raytrace_range: 3.0
   observation_sources: laser_scan_sensor point_cloud_sensor
   laser_scan_sensor: {sensor_frame: base_footprint, data_type: LaserScan, topic: scan_multi, marking: true, clearing: true, raytrace_range: 6.0, obstacle_range: 6.0, inf_is_valid: true}
-
+  point_cloud_sensor: {sensor_frame: map, data_type: PointCloud, topic: /restricted_map, marking: true, clearing: true, obstacle_range: 3.0, raytrace_range: 3.0}
+  
 inflation_layer:
   enabled: true
   inflation_radius: 0.2 # Aumenta este valor para un radio de inflación más amplio
@@ -21,9 +22,3 @@ inflation_layer:
 static_layer:
   topic: map
   enabled: true
-
-proxemic_layer:
-  enabled: true
-  max_time_passed: 30
-  gaussian_renorming: 100
-
