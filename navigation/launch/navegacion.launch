@@ -1,0 +1,7 @@
+<launch>
+    <!-- Incluir laserscan_multi_merger.launch -->
+    <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
+
+    <!-- Incluir navigation.launch -->
+    <include file="$(find navigation)/launch/navigation.launch" />
+</launch>

@@ -1,0 +1,23 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 5.0
+  publish_frequency: 5.0
+  static_map: true
+  transform_tolerance: 1.5
+  cost_scaling_factor: 2.0 # Aumenta para incrementar los costes cerca de obstáculos
+  inflation_radius: 0.2 # Ajusta para cambiar el radio de inflación
+  
+  plugins:
+    - {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+  
+  obstacle_layer:
+    observation_sources: restricted_obstacles
+    restricted_obstacles: 
+      topic: /restricted_map
+      sensor_frame: map
+      data_type: PointCloud
+      marking: true
+      clearing: true

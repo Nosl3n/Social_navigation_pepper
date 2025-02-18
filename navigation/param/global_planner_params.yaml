@@ -1,0 +1,8 @@
+GlobalPlanner:
+  use_dijkstra: false          # Cambia a false para usar A*
+  use_grid_path: true          # Habilita el uso de un camino basado en la cuadrícula
+  allow_unknown: true          # Permite navegar por áreas desconocidas
+  planner_window_x: 6.0        # Tamaño de la ventana de planificación en X (0.0 para deshabilitar)
+  planner_window_y: 6.0        # Tamaño de la ventana de planificación en Y (0.0 para deshabilitar)
+  default_tolerance: 0.5       # Tolerancia para considerar que el objetivo fue alcanzado
+  outline_map: false           # No rodear el mapa con un contorno de obstáculos
